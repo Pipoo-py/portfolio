@@ -1,0 +1,118 @@
+.nav__container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid #3949ab;
+    position: relative;
+}
+
+.nav__menu-container{
+    font-size: 1.4rem;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+}
+.nav__logo-container{
+    padding: 4px 12px;
+}
+
+.nav__menu-container:hover{
+    background-color: #81c784;
+    border-radius: 50%;
+}
+
+.nav__logo-container img{
+    width: clamp(24px, 70dvw, 48px);
+}
+
+.nav__mobile-menu{
+    position: absolute;
+    top: 120%;
+    right: 24px;
+    background-color: #1c1c1c;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 0 24px 0px #0d0d0d;
+    animation: viewMenu .65s both;
+    z-index: 80;
+}
+
+.nav__mobile-list{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav__mobile-item{
+    padding: 8px 16px;
+    border-radius: 16px;
+}
+
+.nav__mobile-item a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav__list-container-pc{
+    display: none;
+}
+
+.nav__list-container-pc .nav__mobile-item{
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.nav__list-container-pc .nav__mobile-item::after{
+    content: "";
+    position: absolute;
+    background-color: #81c784;
+    width: 60%;
+    height: 3px;
+    transition: all .3s;
+    bottom: 100%;
+    opacity: 0;
+    border-radius: 24px;
+}
+
+.nav__list-container-pc .nav__mobile-item:hover::after{
+    bottom: 0;
+    opacity: 1;
+}
+
+@keyframes viewMenu{
+    from{
+        top: -100%;
+    }
+
+    to{
+        top: 110%;
+    }
+}
+
+@media screen and (min-width: 52rem){
+    .nav__menu-container{
+        display: none;
+    }
+
+    .nav__mobile-list{
+        flex-direction: row;
+    }
+
+    .nav__list-container-pc{
+        display: block;
+    }
+}

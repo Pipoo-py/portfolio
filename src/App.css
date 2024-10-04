@@ -1,38 +1,57 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Karla, sans-serif;
+}
+html,
+body{
+  background-color: #1c1c1e;
+  scroll-behavior: smooth;
+}
+
+a{
+  scroll-behavior: smooth;
+}
+
+.proyects__section{
+  margin-top: 32px;
+  padding: 24px;
+}
+
+.contact__section{
+  padding: 36px;
+}
+
+.proyects__section h2,
+.contact__section h2,
+.social__section h2{
   text-align: center;
+  padding: 48px 0;
+  font-size: 2rem;
+  color: #f0f0f0;
+  position: relative;
+  animation: viewTitles .5s both;
+  animation-timeline: view();
+  animation-range: cover 20% cover 50%;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.proyects__container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 64px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes viewTitles{
+  from{
+    opacity: 0;
+    bottom: 100px;
   }
-  to {
-    transform: rotate(360deg);
+
+  to{
+    opacity: 1;
+    bottom: 0;
   }
 }
