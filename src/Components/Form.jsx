@@ -64,7 +64,7 @@ export const ContactUs = () => {
     };
 
     return (
-        <form ref={form} onSubmit={sendEmail} className="form">
+        <form ref={form} onSubmit={(e)=> sendEmail(e)} className="form">
             <label>Nombre</label>
             <input type="text" name="user_name" placeholder="Escriba su nombre" required/>
             {errors.user_name && <p className="error">{errors.user_name}</p>}
@@ -74,7 +74,7 @@ export const ContactUs = () => {
             {errors.user_email && <p className="error">{errors.user_email}</p>}
             
             <label>Mensaje</label>
-            <textarea name="message" placeholder="Escriba aquí su mensaje" required/>
+            <textarea name="message" placeholder="Escriba aquí su mensaje, mínimo (30 caractéres)" required/>
             {errors.message && <p className="error">{errors.message}</p>}
             <input type="submit" value="Enviar" />
             {
