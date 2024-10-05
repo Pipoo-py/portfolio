@@ -37,7 +37,7 @@ const allProyects = [
     },    {
         proyectName: "Caracol C.A",
         description: "Página web desarrollada para Caracol, C.A. una empresa venezolana veterana en la industria petrolera del país.",
-        url: "www.caracol.com.ve",
+        url: "https://www.caracol.com.ve",
         img: "caracol.png",
         languages: ["html", "css","js"],
         personal: false,
